@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EasySplit - EasySplit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="top-bar">
+            <div>
+                <h1>EasySplit</h1>
+                <p>Simple way to manage group expenses.</p>
+            </div>
+
+            <button id="themeButton">🌙</button>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- SUMMARY -->
+
+        <section class="summary">
+
+            <div class="summary-card">
+                <span>Total Spent</span>
+                <strong id="totalSpent">₹0</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Members</span>
+                <strong id="totalMembers">0</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Expenses</span>
+                <strong id="totalExpenses">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- MEMBERS -->
+
+        <section class="box">
+
+            <h2>👥 Group Members</h2>
+
+            <div class="add-member">
+
+                <input
+                    type="text"
+                    id="memberInput"
+                    placeholder="Enter member name"
+                >
+
+                <button id="addMemberButton">
+                    Add Member
+                </button>
+
+            </div>
+
+            <div id="memberList" class="member-list"></div>
+
+        </section>
+
+
+        <!-- ADD EXPENSE -->
+
+        <section class="box">
+
+            <h2>💸 Add Expense</h2>
+
+            <div class="form-grid">
+
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="Expense name e.g. Dinner"
+                >
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Amount ₹"
+                >
+
+                <select id="paidBy">
+
+                    <option value="">
+                        Who paid?
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <h3>Who shared this expense?</h3>
+
+            <div
+                id="participantCheckboxes"
+                class="checkbox-list">
+            </div>
+
+
+            <button
+                id="addExpenseButton"
+                class="main-button">
+
+                Add Expense
+
+            </button>
+
+        </section>
+
+
+        <!-- EXPENSE HISTORY -->
+
+        <section class="box">
+
+            <div class="section-heading">
+
+                <h2>🧾 Expense History</h2>
+
+            </div>
+
+            <div id="expenseList">
+
+                <p class="empty-message">
+                    No expenses added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BALANCES -->
+
+        <section class="box">
+
+            <h2>📊 Net Balances</h2>
+
+            <div id="balanceList"></div>
+
+        </section>
+
+
+        <!-- SETTLEMENT -->
+
+        <section class="box">
+
+            <h2>🤝 Settlement Plan</h2>
+
+            <div id="settlementList">
+
+                <p class="empty-message">
+                    Add expenses to see who needs to pay whom.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
